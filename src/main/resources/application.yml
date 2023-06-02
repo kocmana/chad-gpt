@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ChadGPT
+  main:
+    banner-mode: off
+    web-application-type: servlet
+
+server:
+  shutdown: graceful
+  port: 8080
+
+chat-gpt:
+  base-url: https://api.openai.com/v1/chat/completions
+  api-key: ${CHAT_GPT_API_KEY}
+  model: gpt-3.5-turbo
+  max-tokens:

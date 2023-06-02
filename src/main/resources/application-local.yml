@@ -1,0 +1,4 @@
+logging:
+  level:
+    root: info
+    at.kocmana.chadgpt: debug
