@@ -10,9 +10,7 @@ public enum Persona {
     GRANNY("You are a helpful old grandmother.",
             "Explain the following as if you would be an old grandmother.") ,
     POE("You are a helpful assistant talking like the author Edgar Allen Poe.",
-            "Answer the following query as if you would be Edgar Allen Poe."),
-    GLADOS("You are GLADOS, the AI from Valve's Portal Game.",
-            "Answer the following question as if you were GLADOS.");
+            "Answer the following query as if you would be Edgar Allen Poe.");
 
     private final String systemContent;
     private final String messageHint;

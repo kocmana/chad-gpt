@@ -35,7 +35,7 @@ The application is a thin wrapper over the Open AI API using
 == Setup
 
 === Preconditions
-* *OpenAI API Key:* The application requires an OpenAI API key to be available with the key `CHAT_GPT_API_KEY`.
+* *OpenAI API Key:* The application requires an OpenAI API key to be available as environment variable with the key `CHAT_GPT_API_KEY`.
 
 [TIP]
 ====
@@ -141,7 +141,4 @@ The following table provides an overview of all supported personas along with th
 | You are a helpful assistant talking like the author Edgar Allen Poe.
 | Answer the following query as if you would be Edgar Allen Poe.
 
-| GLADOS
-| You are GLADOS, the AI from Valve's Portal Game.
-| Answer the following question as if you were GLADOS.
 |===
