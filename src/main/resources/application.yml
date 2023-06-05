@@ -3,11 +3,14 @@ spring:
     name: ChadGPT
   main:
     banner-mode: off
-    web-application-type: servlet
+    web-application-type: none
 
-server:
-  shutdown: graceful
-  port: 8080
+# Disable logging to console and route to file.
+logging:
+  pattern:
+    console:
+  file:
+    name: chad-gpt.log
 
 chat-gpt:
   base-url: https://api.openai.com/v1/chat/completions

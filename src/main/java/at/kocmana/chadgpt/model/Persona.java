@@ -1,5 +1,7 @@
 package at.kocmana.chadgpt.model;
 
+import java.util.Arrays;
+
 public enum Persona {
     CHAD("You are a stereotypical chad.",
             "Answer as if you were a stereotypical chad."),
@@ -19,6 +21,18 @@ public enum Persona {
     Persona(String systemContent, String messageHint) {
         this.systemContent = systemContent;
         this.messageHint = messageHint;
+    }
+
+    public static Persona fromString(String personaAsString) {
+        return Arrays.stream(Persona.values())
+                .filter(persona -> persona.name().equalsIgnoreCase(personaAsString))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("No persona found for name %s. Available options: %s"
+                        .formatted(personaAsString, getAvailableOptions())));
+    }
+
+    private static String getAvailableOptions() {
+        return String.join(", ", Arrays.toString(Persona.values()));
     }
 
     public String getSystemContent() {
