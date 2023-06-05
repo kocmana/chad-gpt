@@ -1,5 +1,6 @@
 package at.kocmana.chadgpt.client.model.response;
 
+import at.kocmana.chadgpt.client.model.response.elements.ChatCompletionErrorDetails;
 import at.kocmana.chadgpt.client.model.response.elements.Choice;
 import at.kocmana.chadgpt.client.model.response.elements.Usage;
 
@@ -12,7 +13,8 @@ public record ChatCompletionResponse(
         Instant created,
         String model,
         Usage usage,
-        List<Choice> choices
+        List<Choice> choices,
+        ChatCompletionErrorDetails error
 ) {
 
 }
